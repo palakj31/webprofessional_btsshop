@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourites</title>
+    <!-- Add your CSS and other necessary links -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Your custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('btslogo7.jpg');
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 700px;
+            margin: 20px auto; /* Reduced margin */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #FFFFFF; /* White text color */
+        }
+        .favorite-item {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+            background-color: #9370DB; /* Light purple background color */
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .favorite-item img {
+            max-width: 100px;
+            height: auto;
+        }
+        .favorite-item h2 {
+            margin-top: 10px;
+            color: #FFFFFF;
+        }
+        .favorite-item p {
+            margin: 10px 0;
+            color: #00000;
+        }
+        .remove-btn {
+            padding: 5px 10px;
+            background-color: #FF6347;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .remove-btn:hover {
+            background-color: #D32F2F;
+        }
+        /* Back to BTS Page button styling */
+        .back-btn {
+            display: inline-block;
+            margin-top: 10px; /* Reduced margin */
+            padding: 10px 20px;
+            background-color: #9370DB; /* Purple color */
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Remove underline */
+        }
+        .back-btn:hover {
+            background-color: #7B68EE; /* Darker purple on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Favourites</h1>
+        <!-- Add your favourites content here -->
+        <div class="favorite-item">
+            <img src="C:\Web_Professional\Project\fashion2.jpg" alt="Favorite Item">
+            <h2>Favorite Product 1</h2>
+            <p><b>Fatyi Kpop BTS Charm Making Kit, Bracelet DIY Making Supplies with Bead,Bracelet, Necklace Cord, Pendant for Army</b></p>
+            <button class="remove-btn">Remove</button>
+        </div>
+        <div class="favorite-item">
+            <img src="C:\Web_Professional\Project\golden.jpg" alt="Favorite Item">
+            <h2>Favorite Product 2</h2>
+            <p><b>Careflection BTS Jungkook Golden Photocard 8Pcs Photocard Postcards Album Cards KPOP Photocard Gift for Fans</b></p>
+            <button class="remove-btn">Remove</button>
+        </div>
+        <div class="favorite-item">
+            <img src="C:\Web_Professional\Project\combo3.jpg" alt="Favorite Item">
+            <h2>Favorite Product 3</h2>
+            <p><b>Generic Bts Combo K Pop Merchandise, 2books, 1frame, 3stickers, 1keychain ( Stickers constis of * easy to peel and apply anywhere *water resistance )</b></p>
+            <button class="remove-btn">Remove</button>
+        </div>
+    </div>
+
+    <!-- Back to BTS Page button -->
+    <div style="text-align:center;">
+        <a href="bts.html" class="back-btn">Back to BTS Page</a>
+    </div>
+
+    <script>
+        // JavaScript code to handle remove button
+        var removeButtons = document.querySelectorAll('.remove-btn');
+        removeButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var item = this.parentElement;
+                item.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

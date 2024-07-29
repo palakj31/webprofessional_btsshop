@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Your custom CSS -->
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('btslogo7.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Add position relative to the container */
+        }
+        h1 {
+            text-align: center;
+            color: #fff; /* White text */
+        }
+        .cart-item {
+            border-bottom: 1px solid #ccc;
+            padding: 15px 0;
+        }
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        .cart-item img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 20px;
+            vertical-align: middle;
+        }
+        .cart-item-details {
+            display: flex;
+            align-items: center;
+            color: #fff; /* White text */
+        }
+        .cart-item-details h2 {
+            margin: 0;
+            padding: 5px 10px; /* Add padding */
+            background-color: #9370DB; /* Purple background color */
+            border-radius: 5px; /* Rounded corners */
+        }
+        .cart-item-details p {
+            margin: 0;
+            color: #ddd; /* Lighter gray text */
+        }
+        .cart-item-price {
+            margin-left: auto;
+            color: #fff; /* White text */
+            font-weight: bold;
+        }
+        .cart-total {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 1.2em;
+            color: #fff; /* White text */
+        }
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            position: relative; /* Add position relative to the button */
+        }
+        .checkout-btn:hover {
+            background-color: #45a049;
+        }
+        .popup {
+            background-color: #4CAF50; /* Green background color */
+            color: #fff; /* White text color */
+            text-align: center; /* Center the text */
+            padding: 10px; /* Add some padding */
+            position: absolute; /* Position absolutely */
+            top: calc(100% + 10px); /* 10px above the button */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            display: none; /* Initially hidden */
+            border-radius: 5px; /* Rounded corners */
+            z-index: 1; /* Ensure the popup appears above the button */
+        }
+		.cart-total {
+			margin-top: 20px;
+			text-align: center;
+			font-size: 1.2em;
+			color: #fff; /* White text */
+			background-color: #9370DB; /* Purple background color */
+			padding: 10px; /* Add padding */
+			border-radius: 5px; /* Rounded corners */
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cart</h1>
+        <div class="cart-item">
+            <div class="cart-item-details">
+                <img src="C:\Web_Professional\Project\dynamite.jpg" alt="Product Image">
+                <div>
+                    <h2>Dynamite Album</h2>
+                    <p>Quantity: 1</p>
+                </div>
+            </div>
+            <div class="cart-item-price">Rs.5,000</div>
+        </div>
+        <div class="cart-item">
+            <div class="cart-item-details">
+                <img src="C:\Web_Professional\Project\fashion1.jpg" alt="Product Image">
+                <div>
+                    <h2>BTS Hoodie</h2>
+                    <p>Quantity: 2</p>
+                </div>
+            </div>
+            <div class="cart-item-price">Rs.1,400</div>
+        </div>
+        <!-- Add more cart items as needed -->
+        <div class="cart-item">
+            <div class="cart-item-details">
+                <img src="C:\Web_Professional\Project\layover.jpg" alt="Product Image">
+                <div>
+                    <h2>Layover Photocards</h2>
+                    <p>Quantity: 1</p>
+                </div>
+            </div>
+            <div class="cart-item-price">Rs.500</div>
+        </div>
+        <div class="cart-total">
+            Total: Rs.6,900
+        </div>
+        <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+        <!-- Popup Modal -->
+        <div id="checkout-modal" class="popup">
+            <p>Checkout successful!</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code to handle the popup
+        var modal = document.getElementById('checkout-modal');
+        var btn = document.getElementById("checkout-btn");
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+            setTimeout(function() {
+                modal.style.display = "none";
+            }, 2000); // Hide the modal after 2 seconds
+        }
+    </script>
+</body>
+</html>

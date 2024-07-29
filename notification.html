@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <!-- Include your CSS and other necessary links -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #FFFFFF;
+        }
+        .notification {
+            background-color: #9370DB;
+            border-left: 4px solid #4CAF50;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .notification h2 {
+            margin-top: 0;
+            color: #000;
+        }
+        .notification p {
+            margin-bottom: 0;
+            color: #FFFFFF;
+        }
+        .notification .timestamp {
+            color: #FFFFFF;
+            font-size: 0.8em;
+        }
+        .view-more {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .view-more button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .view-more button:hover {
+            background-color: #45a049;
+        }
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .popup-content {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="background-image: url('btslogo7.jpg'); background-size: cover;">
+    <div class="container">
+        <h1>Notifications</h1>
+        <div class="notification">
+            <h2>New Product Released</h2>
+            <p>A new BTS merchandise collection has been released! Check it out in our store.</p>
+            <p class="timestamp">Posted on May 15, 2024</p>
+        </div>
+        <div class="notification">
+            <h2>Sale Announcement</h2>
+            <p>Enjoy 20% off on all BTS albums for a limited time. Don't miss out!</p>
+            <p class="timestamp">Posted on May 14, 2024</p>
+        </div>
+        <div class="view-more">
+            <button id="view-more-btn">View More</button>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+            <h2>No more new notifications</h2>
+            <button id="close-popup">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code to handle the popup
+        var viewMoreBtn = document.getElementById('view-more-btn');
+        var popup = document.getElementById('popup');
+        var closePopupBtn = document.getElementById('close-popup');
+
+        viewMoreBtn.addEventListener('click', function() {
+            popup.style.display = 'flex';
+        });
+
+        closePopupBtn.addEventListener('click', function() {
+            popup.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

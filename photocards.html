@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photocards</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Your custom CSS -->
+    <style>
+        .sign-in {
+            font-family: RenosRough-Regular;
+            padding-top: 25px;
+        }
+
+        .nav-link {
+            color: #999999;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .navbar-brand {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .nav-text {
+            position: absolute;
+            top: 50%;
+            padding-left: 10px;
+            transform: translateY(-50%);
+        }
+
+        i {
+            padding-left: 100px;
+        }
+
+        @media only screen and (max-width: 800px) {
+            /* For tablets: */
+            .nav-text {
+                position: static;
+            }
+
+            i {
+                padding-left: 10px;
+            }
+
+            img.sign-up {
+                display: none;
+            }
+
+            h1.heading {
+                font-size: 25px;
+                font-weight: bold;
+                padding-left: 30px;
+            }
+
+            div.products {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            /* For mobile phones: */
+            .nav-text {
+                position: static;
+            }
+
+            i {
+                padding-left: 10px;
+            }
+
+            img.sign-up {
+                display: none;
+            }
+
+            div.products {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+
+        .sign-up {
+            padding-top: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .heading {
+            font-family: American Purpose;
+            font-size: 60px;
+            font-weight: bold;
+            color: white; /* Change text color to white */
+            text-align: center; /* Center align the text */
+        }
+
+        .products {
+            padding-left: 175px;
+            padding-right: 175px;
+        }
+
+        .card-btn {
+            background-color: purple; /* Change button color to purple */
+            color: white; /* Change text color to white */
+            font-family: RenosRough-Regular;
+            width: 100%; /* Make button width 100% to fill the card body */
+        }
+
+        .card-title {
+            text-align: center; /* Align card titles to center */
+        }
+
+        .back-to-main {
+            position: fixed; /* Position the back to main page link at the bottom */
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .footer-links {
+            font-family: RenosRough-Regular;
+            font-size: 12px;
+            padding-left: 10px;
+        }
+
+        hr.horizontal-line {
+            border-top: 2px solid #bdbdbd;
+        }
+
+        .carousel-container {
+            margin-top: 20px; /* Adjust the margin between the navbar and the carousel */
+            margin-bottom: 20px; /* Adjust the margin between the carousel and the footer */
+        }
+
+        .footer {
+            margin-top: 20px; /* Adjust the margin between the carousel and the footer */
+        }
+
+        .body {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('btslogo7.jpg'); background-size: cover;">
+    <h1 class="heading">Photocards</h1>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-primary mb-3">
+                    <img src="C:\Web_Professional\Project\layover.jpg" class="card-img-top" alt="Butter Album">
+                    <div class="card-body">
+                        <h5 class="card-title">Layover Photocards</h5>
+						<h6 class="card-title">Rs.500</h6>
+                        <p class="card-text">V Photocard 55pcs V Layover Photo Card Kpop Tae Hyung Layover Lomo Card Layover Album Card Tae Hyung Postcard</p>
+                        <a href="#" class="btn card-btn buy-button" onclick="addToCart(this)">Add to Cart</a> <!-- Apply card-btn class to Buy button -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Another card example -->
+                <div class="card border-primary mb-3">
+                    <img src="C:\Web_Professional\Project\golden.jpg" class="card-img-top" alt="Dynamite Album">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden Photocards</h5>
+						<h6 class="card-title">Rs.700</h6>
+                        <p class="card-text">Careflection BTS Jungkook Golden Photocard 8Pcs Photocard Postcards Album Cards KPOP Photocard Gift for Fans</p>
+                        <a href="#" class="btn card-btn buy-button" onclick="addToCart(this)">Add to Cart</a> <!-- Apply card-btn class to Buy button -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Third card example -->
+                <div class="card border-primary mb-3">
+                    <img src="C:\Web_Professional\Project\ot-7.jpg" class="card-img-top" alt="Proof Album">
+                    <div class="card-body">
+                        <h5 class="card-title">OT-7 Photocards</h5>
+						<h6 class="card-title">Rs.1,000</h6>
+                        <p class="card-text">Wonder Hub Wonderhub Bts Albums The Best Photocard (Set Of 64) Premium Photocards, Merch For Journal Suppliese</p>
+                        <a href="#" class="btn card-btn buy-button" onclick="addToCart(this)">Add to Cart</a> <!-- Apply card-btn class to Buy button -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-to-main">
+        <a href="bts.html" class="btn btn-primary">Back to Main Page</a>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Product Added Successfully</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Your product has been added to the cart.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Your custom JavaScript -->
+    <script>
+        function addToCart(button) {
+            $('#cartModal').modal('show');
+        }
+    </script>
+</body>
+
+</html>
